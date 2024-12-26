@@ -9,6 +9,10 @@ class Event(BaseModel):
 response = chat(
   messages=[
     {
+      'role': 'system',
+      'content': 'Parse information for creating event and return as JSON, always use UTC timezone.',
+    },
+    {
       'role': 'user',
       'content': 'I have a meeting at tomorrow afternoon 2 pm, today is 2024-12-16.',
     }

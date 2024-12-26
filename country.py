@@ -9,6 +9,10 @@ class Country(BaseModel):
 response = chat(
   messages=[
     {
+      'role': 'system',
+      'content': 'Parse information for country and return as JSON.',
+    },
+    {
       'role': 'user',
       'content': 'Tell me about Canada.',
     }
